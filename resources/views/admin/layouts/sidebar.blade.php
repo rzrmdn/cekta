@@ -35,7 +35,7 @@
           </a>
         </li>
         <li>
-          <a href="{{url('admin_mahasiswa')}}">
+          <a href="{{url('/admin_mahasiswa')}}">
             <i class="fa fa-group"></i><span> Mahasiswa</span>
           </a>
         </li>
@@ -50,7 +50,7 @@
           </a>
         </li>
         <li>
-          <a href="{{url('#')}}">
+          <a href="{{url('/admin_pengumuman')}}">
             <i class="fa fa-rss"></i><span> Pengumuman</span>
           </a>
         </li>

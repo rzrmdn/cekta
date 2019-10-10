@@ -17,7 +17,7 @@
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="{{url('adminlte/dist/img/reza.jpg')}}" class="user-image" alt="User Image">
+            <img src="{{url('adminlte/dist/img/reza.jpg')}}" class="user-image fa fa-user" alt="User Image">
             <strong><span class="hidden-xs">Reza Ramadhan</span></strong>
           </a>
           <ul class="dropdown-menu">
@@ -25,12 +25,12 @@
             <li class="user-header">
               <img src="{{url('adminlte/dist/img/reza.jpg')}}" class="img-circle" alt="User Image">
               <p>
-                Reza Ramadhan - Web Programmer
+                Reza Ramadhan - Admin
                 <small>Teknologi Informasi</small>
               </p>
             </li>
             <!-- Menu Body -->
-            <li class="user-body">
+            <!-- <li class="user-body">
               <div class="row">
                 <div class="col-xs-4 text-center">
                   <a href="http://instagram.com/rz_rmdn" target="blank" > Instagram</a>
@@ -42,8 +42,7 @@
                   <a href="http://facebook.com/rz.rmdn" target="blank" > Facebook</a>
                 </div>
               </div>
-              <!-- /.row -->
-            </li>
+            </li> -->
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-left">

@@ -66,7 +66,6 @@ class StudentsController extends Controller
         ]);
         
         Student::create($request->all());
-        // alihkan halaman ke halaman admin_mahasiswa
 	    return redirect('/admin_mahasiswa')->with('status', 'Data Mahasiswa Berhasil Ditambahkan!');
     }
     /**
@@ -89,7 +88,6 @@ class StudentsController extends Controller
      */
     public function edit(Student $student)
     {
-        $students = DB::table('students')->where('id')->get();
         return view('admin.pages.students.edit', ['student'=> $student]);
     }
 
@@ -102,7 +100,44 @@ class StudentsController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        $request->validate([
+            'nama' =>'required',
+            'nim' =>'required',
+            'tempat_lahir' =>'required',
+            'tanggal_lahir' =>'required',
+            'jenis_kelamin' =>'required',
+            'alamat' =>'required',
+            'angkatan' =>'required',
+            'sks' =>'required'
+        ]);
+        
+        // Student::where('id', $student->id)
+        //     ->update([
+        //         'nama' => $request->nama,
+        //         'nim' => $request->nim,
+        //         'tempat_lahir' => $request->tempat_lahir,
+        //         'tanggal_lahir' => $request->tanggal_lahir,
+        //         'jenis_kelamin' => $request->jenis_kelamin,
+        //         'alamat' => $request->alamat,
+        //         'angkatan' => $request->angkatan,
+        //         'sks' => $request->sks,
+        //         'email' => $request->email,
+        //         'no_hp' => $request->no_hp,
+        //         'keterangan' => $request->keterangan
+        //     ]);
+        $student->nama = $request->nama;
+        $student->nim = $request->nim;
+        $student->tempat_lahir = $request->tempat_lahir;
+        $student->tanggal_lahir = $request->tanggal_lahir;
+        $student->jenis_kelamin = $request->jenis_kelamin;
+        $student->alamat = $request->alamat;
+        $student->angkatan = $request->angkatan;
+        $student->sks = $request->sks;
+        $student->email = $request->email;
+        $student->no_hp = $request->no_hp;
+        $student->keterangan = $request->keterangan;
+        $student->save();
+        return redirect('/admin_mahasiswa')->with('status', 'Data Mahasiswa Berhasil Dirubah!');
     }
 
     /**
@@ -113,6 +148,7 @@ class StudentsController extends Controller
      */
     public function destroy(Student $student)
     {
-        return $student;
+        Student::destroy($student->id);
+        return redirect('/admin_mahasiswa')->with('status', 'Data Mahasiswa Berhasil Dihapus!');
     }
 }

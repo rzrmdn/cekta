@@ -1,5 +1,5 @@
 <header class="main-header">
-    <nav class="navbar navbar-static-top" >
+    <nav class="navbar">
       <div class="container">
         <div class="navbar-header">
           <a href="{{url('/')}}" class="navbar-brand">
@@ -9,7 +9,6 @@
             <i class="fa fa-bars"></i>
           </button>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
@@ -33,66 +32,61 @@
                 <li><a href="#">Sidang TA</a></li>
               </ul>
             </li>
-            <!-- <li><a href="#">Link <span class="sr-only">(current)</span></a></li> --> 
+            <li>
+              <form class="navbar-form" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="navbar-search-input" placeholder="Cari ...">
+                </div>
+              </form>
+            </li>
           </ul>
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Cari ...">
-            </div>
-          </form>
         </div>
         <!-- /.navbar-collapse -->
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <!-- User Account Menu -->
-            <li class="dropdown user user-menu">
+            <li class="dropdown user user-menu bg-green">
               <!-- Menu Toggle Button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <!-- The user image in the navbar-->
-                <img src="{{url('adminlte/dist/img/reza.jpg')}}" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Reza Ramadhan</span>
+                <span class=""> LOGIN <i class="fa fa-sign-in"></i></span>
               </a>
               <ul class="dropdown-menu">
-                <!-- The user image in the menu -->
-                <li class="user-header">
-                  <img src="{{url('adminlte/dist/img/reza.jpg')}}" class="img-circle" alt="User Image">
-
-                  <p>
-                    Reza Ramadhan - Web Programmer
-                    <small>Teknologi Informasi</small>
-                  </p>
-                </li>
                 <!-- Menu Body -->
                 <li class="user-body">
                   <div class="row">
-                    <div class="col-xs-4 text-center">
-                      <a href="http://instagram.com/rz_rmdn" target="blank" > Instagram</a>
+                    <div class="col-xs-4 text-center btn btn-default">
+                      <a href="{{url('/admin')}}"> Admin</a>
                     </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="http://steamcommunity.com/rz_rmdn" target="blank" > Steam</a>
+                    <div class="col-xs-4 text-center btn btn-default">
+                      <a href="{{url('#')}}"> Dosen</a>
                     </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="http://facebook.com/rz.rmdn" target="blank" > Facebook</a>
+                    <div class="col-xs-4 text-center btn btn-default">
+                      <a href="{{url('/student')}}"> Mahasiswa</a>
                     </div>
                   </div>
                   <!-- /.row -->
                 </li>
-                <!-- Menu Footer-->
-                <li class="user-footer">
-                  <div class="row">
-                    <div class="col-xs-4 text-center">
-                      <a href="{{url('/admin')}}"> Admin</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="{{url('/lecuter')}}"> Dosen</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="{{url('/student')}}"> Mahasiswa</a>
-                    </div>
+                <div class="box box-info">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Silahkan Login</h3>
                   </div>
-                </li>
+                  <!-- form start -->
+                  <form class="form-horizontal">
+                    <div class="box-body">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                          <input type="text" class="form-control" id="inputUsername" placeholder="Username/NIP/NIM">
+                      </div><br>
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                      </div><br>
+                      <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                  </form>
+                </div>
               </ul>
             </li>
           </ul>

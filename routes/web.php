@@ -15,13 +15,22 @@ Route::get('/','PagesController@index');
 
 //Admin
 Route::get('/admin','AdminController@index');
+Route::get('/student','MahasiswaController@index');
     //Mahasiswa
 Route::get('/admin_mahasiswa','StudentsController@index');
 Route::get('/admin_mahasiswa/create','StudentsController@create');
 Route::get('/admin_mahasiswa/{student}','StudentsController@show');
 Route::post('/admin_mahasiswa','StudentsController@store');
 Route::delete('/admin_mahasiswa/{student}','StudentsController@destroy');
-Route::get('/admin_mahasiswa/edit/{id}','StudentsController@edit');
-Route::put('/admin_mahasiswa','StudentsController@update');
+Route::get('/admin_mahasiswa/edit/{student}','StudentsController@edit');
+Route::patch('/admin_mahasiswa/update/{student}','StudentsController@update');
+    //Pengumuman
+Route::get('/admin_pengumuman','AnnouncementsController@index');
+Route::get('/admin_pengumuman/create','AnnouncementsController@create');
+Route::get('/admin_pengumuman/{announcement}','AnnouncementsController@show');
+Route::post('/admin_pengumuman','AnnouncementsController@store');
+Route::delete('/admin_pengumuman/{announcement}','AnnouncementsController@destroy');
+Route::get('/admin_pengumuman/edit/{announcement}','AnnouncementsController@edit');
+Route::patch('/admin_pengumuman/update/{announcement}','AnnouncementsController@update');
 // Route::get('/admin_mahasiswa/{student}','StudentsController@show');
 // Route::resource('/admin_mahasiswa','StudentsController');

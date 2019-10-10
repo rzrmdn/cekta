@@ -30,6 +30,24 @@
           </div>
           <!-- /.box-body -->
         </div>
+        <div class="box box-default">
+          <div class="box-header with-border">
+            <h3 class="box-title">Judul Berita</h3>
+          </div>
+          <div class="box-body">
+            Isi berita disini
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <div class="box box-default">
+          <div class="box-header with-border">
+            <h3 class="box-title">Judul Berita</h3>
+          </div>
+          <div class="box-body">
+            Isi berita disini
+          </div>
+          <!-- /.box-body -->
+        </div>
         <div class="callout callout-info">
           <h4>Tip!</h4>
           <p>Add the layout-top-nav class to the body tag to get this layout. This feature can also be used with a
